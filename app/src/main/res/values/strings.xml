@@ -1,0 +1,35 @@
+<resources>
+    <color name="light_color">#1c5d8e</color>
+    <color name="dark_color">#a2a1b8</color>
+    <string name="app_name">pick4me</string>
+    <string name="signin">"Sign In"</string>
+    <string name="signup">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="usernameprint">sandeepkasundra</string>
+    <string name="email">Email</string>
+    <string name="emailprint">sandeepkasundra@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="facebook">Sign-in with Facebook</string>
+    <string name="twitter">Sign-in with Twitter</string>
+    <string name="profile">Profile</string>
+    <string name="question_signin">"Don't have an accaunt?"</string>
+    <string name="fbfollowers">786 Followers</string>
+    <string name="twfollowers">456 Followers</string>
+    <string name="facebookstr">Facebook</string>
+    <string name="twitterstr">Twitter</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="newsfeed">Newsfeed</string>
+    <string name="title_activity_main_you_pick">MainYouPick</string>
+    <string name="title_activity_picked4_you">Picked4YouActivity</string>
+    <string name="title_activity_news_feed">NewsFeedActivity</string>
+    <string name="youpick">You Pick</string>
+    <string name="picked4you">Picked4You </string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="newsfeed_username">User Name here</string>
+    <string name="newsfeed_time">31 min</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

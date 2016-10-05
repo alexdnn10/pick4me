@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="button_separator">10dp</dimen>
+    <dimen name="frame_button_bottom">5dp</dimen>
+    <dimen name="frame_button_margin">30dp</dimen>
+    <dimen name="logo_margin">25dp</dimen>
+    <dimen name="signin_tb">15dp</dimen>
+    <dimen name="signin_lr">13dp</dimen>
+
+    <dimen name="edit_height">30dp</dimen>
+    <dimen name="profilepadding">8dp</dimen>
+    <dimen name="photobar">75dp</dimen>
+    <dimen name="bluebottom">13dp</dimen>
+
+    <dimen name="mall_profile_px">8dp</dimen>
+    <dimen name="stb_profile_px">10dp</dimen>
+    <dimen name="mblue_profile_px">13dp</dimen>
+    <dimen name="sphoto_profile_px">53dp</dimen>
+    <dimen name="pphoto_profile_px">1dp</dimen>
+    <dimen name="mtphoto_profile_px">75dp</dimen>
+    <dimen name="mlrphoto_profile_px">15dp</dimen>
+    <dimen name="mbfbtw_profile_px">20dp</dimen>
+    <dimen name="sfbtw_profile_px">10dp</dimen>
+    <dimen name="heightblue_profile_px">125dp</dimen>
+</resources>

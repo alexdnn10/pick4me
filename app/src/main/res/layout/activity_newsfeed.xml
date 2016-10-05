@@ -1,0 +1,65 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_color">
+
+
+    <ImageButton
+        android:layout_width="@dimen/stb_profile_px"
+        android:layout_height="@dimen/stb_profile_px"
+        android:id="@+id/button"
+        android:background="@drawable/menu"
+        android:layout_marginLeft="@dimen/mall_profile_px"
+        android:layout_marginTop="@dimen/mall_profile_px"
+        android:layout_gravity="top|left"
+        android:baselineAlignBottom="false"
+        android:foregroundGravity="top" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/stb_profile_px"
+        android:text="@string/newsfeed"
+        android:id="@+id/profile"
+        android:layout_marginTop="@dimen/mall_profile_px"
+        android:layout_gravity="top|center_horizontal"
+        android:foregroundGravity="top" />
+    <ImageButton
+        android:layout_width="@dimen/stb_profile_px"
+        android:layout_height="@dimen/stb_profile_px"
+        android:id="@+id/button2"
+        android:background="@drawable/add_news"
+        android:layout_marginRight="@dimen/mall_profile_px"
+        android:layout_marginTop="@dimen/mall_profile_px"
+        android:layout_gravity="top|right"
+        android:foregroundGravity="top" />
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/light_color"
+        android:duplicateParentState="true"
+        android:layout_marginTop="45dp">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="#b8c8d8"
+            app:tabIndicatorHeight="5dp"
+            android:textAlignment="center"
+            android:background="#ff2d55" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/light_color"
+        android:paddingTop="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+</android.support.design.widget.CoordinatorLayout>
