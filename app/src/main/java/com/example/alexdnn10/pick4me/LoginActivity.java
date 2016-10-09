@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mTwButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( LoginActivity.this, ProfileActivity.class);
+                Intent intent = new Intent( LoginActivity.this, CropImageActivity.class);
                 startActivity(intent);
             }
         });

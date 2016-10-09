@@ -12,7 +12,7 @@
 
     <dimen name="edit_height">60dp</dimen>
     <dimen name="profilepadding">15dp</dimen>
-    <dimen name="photobar">150dp</dimen>
+    <dimen name="profile_photo_margin_top">150dp</dimen>
     <dimen name="bluebottom">25dp</dimen>
 
     <dimen name="mall_profile_px">15dp</dimen>
