@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
@@ -53,6 +55,10 @@
             android:layout_weight="1"
             android:id="@+id/frame_edits"
             android:layout_gravity="center_horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@android:style/TextAppearance.Material.Widget.EditText">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
@@ -65,13 +71,18 @@
                 android:background="#00000000"
                 android:hint="@string/username"
                 android:textColorHint="#a2a1b8"
-                android:lines="1" />
+                android:lines="1"/>
+            </android.support.design.widget.TextInputLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:id="@+id/line_username"
                 android:background="#336e9a" />
-
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@android:style/TextAppearance.Material.Widget.EditText"
+                style="@style/Widget.Design.TextInputLayout">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
@@ -83,8 +94,8 @@
                 android:background="#00000000"
                 android:hint="@string/password"
                 android:textColorHint="#a2a1b8"
-                android:inputType="textPassword"
                 style="@style/Widget.AppCompat.ImageButton" />
+            </android.support.design.widget.TextInputLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

@@ -1,7 +1,12 @@
 package com.example.alexdnn10.pick4me;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +16,6 @@ import android.widget.TextView;
 import java.util.List;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> {
-
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
 
         CardView cv;
@@ -36,9 +40,12 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> 
         }
     }
     List<Person> persons;
+    Context ctx;
+    int x=300;
 
-    RVAdapter(List<Person> persons){
+    RVAdapter(List<Person> persons, Context context){
         this.persons = persons;
+        this.ctx=context;
     }
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
@@ -56,13 +63,52 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> 
         personViewHolder.userName.setText(persons.get(i).username);
         personViewHolder.userTime.setText(persons.get(i).time);
         personViewHolder.userPhoto.setImageResource(persons.get(i).userphoto);
-        personViewHolder.userPhoto_1.setImageResource(persons.get(i).photoId_1);
-        personViewHolder.userPhoto_2.setImageResource(persons.get(i).photoId_2);
-        personViewHolder.userPhoto_3.setImageResource(persons.get(i).photoId_3);
-        personViewHolder.userPhoto_4.setImageResource(persons.get(i).photoId_4);
+        personViewHolder.userPhoto_1.setImageBitmap(decodeSampledBitmapFromResource(ctx.getResources(), persons.get(i).photoId_1, x, x));
+        personViewHolder.userPhoto_2.setImageBitmap(decodeSampledBitmapFromResource(ctx.getResources(), persons.get(i).photoId_2, x, x));
+        personViewHolder.userPhoto_3.setImageBitmap(decodeSampledBitmapFromResource(ctx.getResources(), persons.get(i).photoId_3, x, x));
+        personViewHolder.userPhoto_4.setImageBitmap(decodeSampledBitmapFromResource(ctx.getResources(), persons.get(i).photoId_4, x, x));
     }
     @Override
     public int getItemCount() {
         return persons.size();
     }
+
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
+    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+                                                         int reqWidth, int reqHeight) {
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, resId, options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res, resId, options);
+    }
 }
+

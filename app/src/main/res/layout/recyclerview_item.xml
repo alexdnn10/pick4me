@@ -42,8 +42,9 @@
             android:layout_marginLeft="10dp"
             android:layout_height="wrap_content"
             android:id="@+id/newsfeed_username"
+            android:textColor="#a2a1b8"
             android:layout_marginStart="10dp"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="35dp" />
 
         <TextView
             android:text="@string/newsfeed_time"
@@ -52,7 +53,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/newsfeed_time"
             android:inputType="time"
-            tools:layout_editor_absoluteY="0dp"
+            android:textColor="#a2a1b8"
+            tools:layout_editor_absoluteY="35dp"
             android:layout_marginRight="5dp"
             android:layout_marginEnd="5dp" />
 

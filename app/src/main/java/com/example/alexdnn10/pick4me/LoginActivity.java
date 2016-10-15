@@ -4,23 +4,39 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     ImageButton mButtonSignin;
     Button mFbButton;
     Button mTwButton;
+    EditText mEditUsername;
+    EditText mEditPassword;
+    int screenWidth;
+    int screenHeight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        screenWidth = displaymetrics.widthPixels;
+        screenHeight = displaymetrics.heightPixels;
+
         mButtonSignin=(ImageButton) findViewById(R.id.button_signin);
+        mEditUsername=(EditText) findViewById(R.id.edit_username);
+        mEditPassword=(EditText) findViewById(R.id.edit_password);
+        mEditUsername.setText(""+screenHeight);
+        mEditPassword.setText(""+screenWidth);
         mButtonSignin.setOnClickListener(this);
         mFbButton=(Button) findViewById(R.id.button_facebook);
         mTwButton=(Button) findViewById(R.id.button_twitter);
@@ -44,7 +60,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent intent=new Intent();
         intent.setClass(this, NewsFeedActivity.class);
         startActivity(intent);
-     //   finish();
     }
 
 }

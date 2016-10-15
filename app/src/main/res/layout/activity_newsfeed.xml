@@ -9,7 +9,7 @@
     <ImageButton
         android:layout_width="@dimen/stb_profile_px"
         android:layout_height="@dimen/stb_profile_px"
-        android:id="@+id/button"
+        android:id="@+id/button_menu"
         android:background="@drawable/menu"
         android:layout_marginLeft="@dimen/mall_profile_px"
         android:layout_marginTop="@dimen/mall_profile_px"
@@ -27,7 +27,7 @@
     <ImageButton
         android:layout_width="@dimen/stb_profile_px"
         android:layout_height="@dimen/stb_profile_px"
-        android:id="@+id/button2"
+        android:id="@+id/button_add"
         android:background="@drawable/add_news"
         android:layout_marginRight="@dimen/mall_profile_px"
         android:layout_marginTop="@dimen/mall_profile_px"
