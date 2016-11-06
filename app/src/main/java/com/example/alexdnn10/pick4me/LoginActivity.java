@@ -35,8 +35,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mButtonSignin=(ImageButton) findViewById(R.id.button_signin);
         mEditUsername=(EditText) findViewById(R.id.edit_username);
         mEditPassword=(EditText) findViewById(R.id.edit_password);
-        mEditUsername.setText(""+screenHeight);
-        mEditPassword.setText(""+screenWidth);
+        //mEditUsername.setText(""+screenHeight);
+        //mEditPassword.setText(""+screenWidth);
         mButtonSignin.setOnClickListener(this);
         mFbButton=(Button) findViewById(R.id.button_facebook);
         mTwButton=(Button) findViewById(R.id.button_twitter);
@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mTwButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( LoginActivity.this, CropImageActivity.class);
+                Intent intent = new Intent( LoginActivity.this, ProfileActivity.class);
                 startActivity(intent);
             }
         });
